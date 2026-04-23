@@ -21,17 +21,21 @@ style: |
     background: #000000;
     color: #FFFFFF;
     font-family: "Atkinson Hyperlegible", Verdana, Geneva, sans-serif;
-    font-size: 30px;
-    line-height: 1.5;
+    font-size: 24px;
+    line-height: 1.35;
     text-align: left;
     letter-spacing: 0.01em;
+    padding: 50px 60px;
   }
   section.center { text-align: center; }
 
-  h1, h2, h3 { font-weight: 700; line-height: 1.2; }
-  h1 { color: #FFD166; }
-  h2 { color: #A8E6FF; }
-  h3 { color: #B5F0B5; }
+  h1, h2, h3 { font-weight: 700; line-height: 1.15; margin: 0.4em 0; }
+  h1 { color: #FFD166; font-size: 1.7em; }
+  h2 { color: #A8E6FF; font-size: 1.4em; }
+  h3 { color: #B5F0B5; font-size: 1.15em; letter-spacing: 0.5px; }
+
+  p, ul, ol, blockquote, table { margin: 0.5em 0; }
+  li { margin-bottom: 0.25em; }
 
   strong { color: #FFD166; }
 
@@ -52,26 +56,26 @@ style: |
   pre code { background: #2D2D2D; color: #FFFFFF; }
 
   table {
-    font-size: 24px;
+    font-size: 20px;
     border-collapse: collapse;
   }
-  th, td { padding: 0.4em 0.7em; border: 1px solid #555555; }
+  th, td { padding: 0.3em 0.6em; border: 1px solid #555555; }
   th { background: #1A1A1A; color: #FFD166; }
 
   a { color: #A8E6FF; text-decoration: underline; }
   a:hover, a:focus { color: #FFD166; outline: 2px solid #FFD166; }
 
   .stat {
-    font-size: 96px;
+    font-size: 88px;
     color: #FFD166;
     font-weight: 800;
     line-height: 1;
   }
   .stat-label {
-    font-size: 28px;
+    font-size: 24px;
     color: #FFFFFF;
   }
-  .small { font-size: 24px; color: #D0D0D0; }
+  .small { font-size: 18px; color: #D0D0D0; }
   .warn { color: #FF8A8A; font-weight: 700; }
   .ok   { color: #B5F0B5; font-weight: 700; }
 
@@ -124,9 +128,20 @@ style: |
 
 <!--
 TIMING: 45 min total — aim for 35 min talk + 10 min Q&A.
-Open by asking the room: "Hands up — who here works at a company with a formal Open Source Program Office?"
-Usually 2-5%. Then: "Hands up — who uses open source in production every day?" Everyone.
-That gap is the entire talk.
+
+OPEN WITH (≤ 30 seconds):
+1. Thank OSDay organisers / Codemotion.
+2. Acknowledge the Code of Conduct (osday.dev/code-of-conduct) and
+   reaffirm we're operating under it for the whole talk + Q&A.
+3. Say loud and clear that the slides, transcript, and accessibility
+   statement are public at github.com/braghettos/osday-ospo — anyone
+   who prefers to follow along on their own device can do so right
+   now (better contrast, screen reader, larger text, etc.).
+
+THEN HOOK:
+"Hands up — who works at a company with a formal Open Source Program
+Office?" Usually 2-5%. Then: "Hands up — who uses open source in
+production every day?" Everyone. That gap is the entire talk.
 -->
 
 ---
@@ -228,7 +243,7 @@ because we couldn't find Y, then six months later replaced X with Y."
 
 ## What "no OSPO" looks like in real life
 
-**🔥 Equifax (2017)** — 147M records breached. Root cause: an unpatched Apache Struts CVE.
+**🔥 Equifax (2017)** — 147M records breached. Root cause: an unpatched **CVE** *(a publicly known security vulnerability)* in Apache Struts.
 *A single team owned patching. Nobody owned awareness.*
 
 **🔥 Heartbleed (2014)** — 2 maintainers, $2K/year donations, securing half the internet's TLS.
@@ -337,7 +352,7 @@ That's exactly *why* you need one.
 | > 20 engineers | Decision tax compounds quickly |
 | Customer contracts with IP/SBOM clauses | Compliance is a sales blocker |
 | Any regulated workload (fintech, health, auto) | Auditors will ask. Have an answer. |
-| M&A on the horizon | Open source due diligence is now standard |
+| Mergers & acquisitions (M&A) on the horizon | Open source due diligence is now standard |
 | AI-generated code in production | License provenance is a 2026 problem |
 
 **Capital One** — heavily regulated bank, OSPO since 2015.
@@ -394,7 +409,7 @@ content. Pause briefly after each row.
 - Set **policies**: when to consume, when to contribute, when to release
 - Stand up an **Open Source Review Board** (legal + security + engineering)
 - Make **risk explicit**: brand, IP, competitive, license
-- Support **M&A** due diligence (target's OSS posture)
+- Support **M&A** due diligence (target's open source software / OSS posture)
 - Define **measurable goals** annually — like Red Hat does
 
 > *"There is nothing traditional about Capital One and our approach to technology."* — Capital One OSPO
@@ -433,10 +448,10 @@ optional.
 **The question:** *Are we good citizens of the projects we depend on?*
 
 - Process for **upstreaming patches** (don't carry forks forever)
-- **CLA / DCO** infrastructure (CLA Assistant is open source)
+- **Contributor License Agreement (CLA)** / **Developer Certificate of Origin (DCO)** infrastructure — *CLA Assistant* is open source
 - **Patent / legal review** before public release
 - **Project incubation** playbooks (naming, governance, license, hosting)
-- Foundation memberships: **Linux Foundation, Apache, Eclipse, OpenSSF, CNCF**
+- Foundation memberships: **Linux Foundation, Apache, Eclipse, OpenSSF, CNCF** *(Cloud Native Computing Foundation)*
 - Recognize and **reward** internal contributors
 
 **Why it matters:**
@@ -595,9 +610,15 @@ the audience can verify. Trust = leverage.
 ## Real Stories
 ### *Successes worth copying. Failures worth fearing.*
 
+<br>
+
+<span class="small">**Legend:** ✅ = success story (worth copying) · 🔥 = failure story (worth fearing)</span>
+
 <!--
 8 minutes. The most memorable section. Stories beat slides.
 Mix 3-4 successes with 2 failures. Failures are the warning shots.
+The legend is for accessibility — Codemotion guideline #4 — but it
+also reinforces the framing for sighted attendees.
 -->
 
 ---
@@ -663,7 +684,7 @@ help them see what year-3 looks like.
 
 ## ✅ Success · Porsche — non-software-native goes OSS-first
 
-**Context:** Carmaker becoming a software company. Inspired by Tesla's 2-ECU architecture vs. their dozens.
+**Context:** Carmaker becoming a software company. Inspired by Tesla's 2-ECU *(Electronic Control Unit)* architecture vs. traditional carmakers' dozens.
 
 **What they built:**
 - OSPO formally in **2020**, after pre-OSPO efforts since **2018**
@@ -772,7 +793,7 @@ sequenced. They should leave feeling "I can start Monday."
 **Slide 3 · Upside**
 > *"OSS-active companies recruit 30% faster. We're losing offers to them."*
 
-**Ask:** *"Give me one FTE, an executive sponsor, and 6 months. I'll show you the SBOM coverage, license posture, and a contribution program."*
+**Ask:** *"Give me one FTE (full-time employee), an executive sponsor, and 6 months. I'll show you the SBOM coverage, license posture, and a contribution program."*
 
 <!--
 This is the pitch. Three slides. Risk, cost, upside. End on an ask
@@ -839,15 +860,13 @@ remember tomorrow morning. Keep it tight.
 
 ## Questions?
 
-<br>
+![w:220 QR code that opens github.com/braghettos/osday-ospo — slides, transcript, accessibility statement, and audit results](assets/qr-repo.png)
 
-**Slides + reading list:** *github.com/braghettos/osday-ospo*
+**Scan ↑** or open *github.com/braghettos/osday-ospo*
 
 **Get in touch:** *linkedin.com/in/diegobraga86*
 
-<br>
-
-*Sources: TODO Group · ospoglossary.todogroup.org · ospomindmap.todogroup.org · Black Duck OSSRA 2026*
+<span class="small">Sources: TODO Group · ospoglossary.todogroup.org · ospomindmap.todogroup.org · Black Duck OSSRA 2026</span>
 
 <!--
 10 minutes for Q&A.

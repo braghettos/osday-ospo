@@ -16,6 +16,7 @@
   "devDependencies": {
     "@axe-core/cli": "^4.11.2",
     "@marp-team/marp-cli": "^4.0.0",
-    "pa11y": "^9.1.1"
+    "pa11y": "^9.1.1",
+    "qrcode": "^1.5.4"
   }
 }
