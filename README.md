@@ -1,6 +1,8 @@
 # Open Source in Production · OSDay 2026
 
-Slide deck for the talk **"Open Source in Production: Why Your Company Needs an OSPO (Before It's Too Late)"** at [osday.dev](https://osday.dev).
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+Slide deck for the talk **"Open Source in Production: Why Your Company Needs an OSPO (Before It's Too Late)"** by Diego Braga (CTO & Co-founder, Krateo PlatformOps) at [OSDay 2026](https://osday.dev), Florence — Friday 24 April, 12:30–13:15.
 
 **Format:** 45 minutes (≈35 min talk + 10 min Q&A) · ~30 slides
 **Source:** `slides.md` (Marp markdown)
@@ -43,6 +45,10 @@ No global install needed — `marp-cli` runs via `npx`.
 - TODO Group · [case studies](https://todogroup.org/resources/case-studies/) (Capital One, Microsoft, SAP, Porsche, Comcast, Uber, Red Hat)
 - Black Duck · OSSRA 2026 report (open source vulnerability + license stats)
 - Public incident retrospectives: Equifax (2017), Heartbleed (2014), Log4Shell (2021), xz utils backdoor (2024)
+
+## License
+
+Slides and accompanying text are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — share, remix, and adapt with attribution to Diego Braga.
 
 ## Editing notes
 
