@@ -121,20 +121,23 @@ style: |
   /* Page-number indicator (Marp renders this as section:after).
    * Default Marpit constrains it to an 80×80px box with 30px padding,
    * leaving ~20px of usable inner width — "5 / 30" at 22px overflows
-   * and clips. Detach with absolute positioning so it sizes to its
-   * own content. */
+   * and clips. Detach with absolute positioning, give it a small dark
+   * chip background and high z-index so it stays legible above any
+   * overlapping slide content. */
   section:after {
     content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total) !important;
-    font-size: 22px !important;
+    font-size: 20px !important;
     color: #FFFFFF !important;
     text-shadow: none !important;
-    background: transparent !important;
+    background: rgba(45, 45, 45, 0.85) !important;
     width: auto !important;
     height: auto !important;
-    padding: 0 !important;
+    padding: 4px 12px !important;
+    border-radius: 4px !important;
     position: absolute !important;
-    right: 30px !important;
-    bottom: 20px !important;
+    right: 18px !important;
+    bottom: 12px !important;
+    z-index: 50 !important;
   }
 
   /* Title slide: force explicit colors on inline em/strong with their own
