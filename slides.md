@@ -96,12 +96,26 @@ style: |
   }
 
   /* Slide-internal header/footer (from `header:` / `footer:` frontmatter)
-   * — bare selectors so Marpit's `section X` scoping reaches them */
+   * — bare selectors so Marpit's `section X` scoping reaches them.
+   * Default uncover sizes these at ~.45em (≈ 11 px) which is unreadable
+   * from the back of the room; force a fixed 18 px. */
   header, footer {
     color: #FFFFFF !important;
     text-shadow: none !important;
     background: #000000 !important;
     opacity: 1 !important;
+    font-size: 18px !important;
+  }
+
+  /* Page-number indicator (Marp renders this as section:after).
+   * Default ~.6em (≈ 14 px) is small + sits over the bottom-right
+   * gradient-corner. Force a readable size and remove the
+   * decorative gradient corner so the number stands alone. */
+  section:after {
+    font-size: 22px !important;
+    color: #FFFFFF !important;
+    text-shadow: none !important;
+    background: transparent !important;
   }
 
   /* Title slide: force explicit colors on inline em/strong with their own
