@@ -1,26 +1,81 @@
 ---
 marp: true
 theme: uncover
-class: invert
 paginate: true
 size: 16:9
 header: "OSDay 2026 · Florence · Open Source in Production"
 footer: "Diego Braga · linkedin.com/in/diegobraga86 · #osday"
+lang: en
 style: |
+  /* === Accessibility-first theme ===
+   * - Atkinson Hyperlegible (Braille Institute, low-vision optimized)
+   *   with Verdana fallback (designed for screen legibility, ubiquitous)
+   * - All foreground colors verified WCAG AA against pure-black background:
+   *   body white #FFFFFF (21:1), amber #FFD166 (~13:1), sky #A8E6FF (~14:1),
+   *   mint #B5F0B5 (~13:1), warn #FF8A8A (~7:1), muted #D0D0D0 (~16:1).
+   * - Body 30px / small 24px / line-height 1.5 for readability.
+   */
+  @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
+
   section {
-    font-size: 28px;
+    background: #000000;
+    color: #FFFFFF;
+    font-family: "Atkinson Hyperlegible", Verdana, Geneva, sans-serif;
+    font-size: 30px;
+    line-height: 1.5;
     text-align: left;
+    letter-spacing: 0.01em;
   }
   section.center { text-align: center; }
-  h1 { color: #ffb86c; }
-  h2 { color: #8be9fd; }
-  h3 { color: #50fa7b; }
-  blockquote { border-left: 4px solid #ff79c6; color: #f8f8f2; }
-  code { background: #44475a; padding: 2px 6px; border-radius: 4px; }
-  .stat { font-size: 84px; color: #ff5555; font-weight: 800; line-height: 1; }
-  .stat-label { font-size: 24px; color: #bd93f9; }
-  .small { font-size: 20px; color: #6272a4; }
-  table { font-size: 22px; }
+
+  h1, h2, h3 { font-weight: 700; line-height: 1.2; }
+  h1 { color: #FFD166; }
+  h2 { color: #A8E6FF; }
+  h3 { color: #B5F0B5; }
+
+  strong { color: #FFD166; }
+
+  blockquote {
+    border-left: 6px solid #A8E6FF;
+    padding-left: 1em;
+    color: #FFFFFF;
+    font-style: normal;
+  }
+
+  code {
+    background: #2D2D2D;
+    color: #FFFFFF;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  pre code { background: #2D2D2D; color: #FFFFFF; }
+
+  table {
+    font-size: 24px;
+    border-collapse: collapse;
+  }
+  th, td { padding: 0.4em 0.7em; border: 1px solid #555555; }
+  th { background: #1A1A1A; color: #FFD166; }
+
+  a { color: #A8E6FF; text-decoration: underline; }
+  a:hover, a:focus { color: #FFD166; outline: 2px solid #FFD166; }
+
+  .stat {
+    font-size: 96px;
+    color: #FFD166;
+    font-weight: 800;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 28px;
+    color: #FFFFFF;
+  }
+  .small { font-size: 24px; color: #D0D0D0; }
+  .warn { color: #FF8A8A; font-weight: 700; }
+  .ok   { color: #B5F0B5; font-weight: 700; }
+
+  /* Decorative-only marks: hide from screen readers via aria-hidden in markup */
 ---
 
 <!-- _class: center -->
@@ -200,7 +255,7 @@ models. Surface them first, then replace them.
 
 <br>
 
-| **Inward-facing** 🏢 | **Outward-facing** 🌍 |
+| **Inward-facing** | **Outward-facing** |
 |---|---|
 | Policy, process, tooling | Community engagement |
 | Education & enablement | Foundation memberships |
@@ -281,27 +336,20 @@ overview. Don't go too deep — point them at the mindmap.
 
 <br>
 
-```
-       ┌─────────────────────────────────────────┐
-       │              OSPO                       │
-       ├──────────┬──────────┬──────────┬────────┤
-       │ Strategy │ Compli-  │ Contri-  │Culture │
-       │    &     │ ance &   │ bution   │   &    │
-       │ Govern.  │ Security │ Upstream │ Talent │
-       └──────────┴──────────┴──────────┴────────┘
-            ↓          ↓          ↓         ↓
-         Policy     SBOM       PRs &     Inner-
-         Risk       CVEs       Projects  Source
-         M&A        Licenses   CLAs      Training
-```
+| Pillar | Day-to-day work |
+|---|---|
+| **1. Strategy & Governance** | Policy · risk · M&A due diligence |
+| **2. Compliance & Security** | SBOM · CVEs · license scanning |
+| **3. Contribution & Upstream** | Pull requests · projects · CLAs |
+| **4. Culture & Talent** | InnerSource · training · recruiting |
 
 <br>
 
 Different orgs weight them differently. **All four exist.**
 
 <!--
-This ASCII map is intentionally crude — it forces you to verbalize each
-pillar instead of letting a slide do the work.
+Verbalize each pillar out loud — the table is a memory aid, not the
+content. Pause briefly after each row.
 -->
 
 ---
@@ -398,7 +446,7 @@ quantifies easily.
 | Pillar | Owner archetype | Key artifact | Failure mode |
 |---|---|---|---|
 | **Strategy & Governance** | Counselor | OSS policy doc | Decisions made ad-hoc |
-| **Compliance & Security** | Gatekeeper | SBOM + scan pipeline | "Are we vulnerable?" 🤷 |
+| **Compliance & Security** | Gatekeeper | SBOM + scan pipeline | "Are we vulnerable?" *(no answer)* |
 | **Contribution & Upstream** | Advocate | Forking & CLA process | Permanent forks, no influence |
 | **Culture & Talent** | Enabler + Environmentalist | InnerSource + training | Wheel reinvented quarterly |
 
@@ -703,21 +751,21 @@ that's small enough to say yes to.
 
 ## You're not alone · Resources
 
-🌐 **TODO Group** — todogroup.org · the global OSPO community
+**TODO Group** — todogroup.org · the global OSPO community
 - Glossary, mindmap, case studies, surveys
 
-🌐 **OSPO Alliance** — ospo.zone · the European arm (Eclipse Foundation)
+**OSPO Alliance** — ospo.zone · the European arm (Eclipse Foundation)
 - *Good Governance Initiative*, regional working groups
 
-🌐 **OpenChain** — openchainproject.org · ISO/IEC 5230 compliance
+**OpenChain** — openchainproject.org · ISO/IEC 5230 compliance
 - The international standard for OSS license compliance
 
-🌐 **OpenSSF** — openssf.org · supply-chain security
+**OpenSSF** — openssf.org · supply-chain security
 - Scorecard, Sigstore, Alpha-Omega, S2C2F
 
-🌐 **InnerSource Commons** — innersourcecommons.org
+**InnerSource Commons** — innersourcecommons.org
 
-📚 **Linux Foundation training** — LFC191, LFC193, LFC194
+**Linux Foundation training** — LFC191, LFC193, LFC194
 
 <!--
 Don't read every URL. Tell them the slides are public — and they are
