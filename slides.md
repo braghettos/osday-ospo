@@ -119,16 +119,22 @@ style: |
   }
 
   /* Page-number indicator (Marp renders this as section:after).
-   * Default ~.6em (≈ 14 px) is small + sits over the bottom-right
-   * gradient-corner. Force a readable size, remove the decorative
-   * gradient corner, and switch from "5" to "5 / 30" so the audience
-   * sees position-in-deck, not just current page. */
+   * Default Marpit constrains it to an 80×80px box with 30px padding,
+   * leaving ~20px of usable inner width — "5 / 30" at 22px overflows
+   * and clips. Detach with absolute positioning so it sizes to its
+   * own content. */
   section:after {
     content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total) !important;
     font-size: 22px !important;
     color: #FFFFFF !important;
     text-shadow: none !important;
     background: transparent !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    position: absolute !important;
+    right: 30px !important;
+    bottom: 20px !important;
   }
 
   /* Title slide: force explicit colors on inline em/strong with their own
