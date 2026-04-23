@@ -87,9 +87,15 @@ style: |
 
   /* Decorative-only marks: hide from screen readers via aria-hidden in markup */
 
-  /* === Override uncover theme variables for high-contrast slide chrome === */
+  /* === Override uncover theme variables for high-contrast slide chrome ===
+   * The uncover theme uses light-dark() for these vars and falls back to
+   * LIGHT-mode values when prefers-color-scheme isn't set, which would
+   * paint code blocks on a near-white #f2f1f4 surface — invisible against
+   * our white --color-foreground. Override every var that the theme
+   * uses light-dark() on. */
   section {
     --color-background: #000000;
+    --color-background-code: #2D2D2D;
     --color-background-paginate: #000000;
     --color-foreground: #FFFFFF;
     --color-header: #FFFFFF;
