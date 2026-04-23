@@ -45,6 +45,11 @@ style: |
     color: #FFFFFF;
     font-style: normal;
   }
+  /* Strip Marp/uncover's decorative SVG quote-mark glyphs at the
+   * blockquote corners — they render as #888 @ 0.33 opacity which is
+   * effectively invisible on the black background. The text already
+   * has its own curly quotes and a visible attribution line. */
+  blockquote::before, blockquote::after { content: none !important; display: none !important; }
 
   code {
     background: #2D2D2D;
