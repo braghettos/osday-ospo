@@ -30,13 +30,15 @@ No global install needed — `marp-cli` runs via `npx`.
 
 | Part | Slides | Time |
 |------|--------|------|
-| 1 · The Problem | 5 | 5 min |
-| 2 · What is an OSPO | 5 | 5 min |
-| 3 · The 4 Pillars | 6 | 8 min |
-| 4 · ROI | 4 | 6 min |
-| 5 · Real Stories (success + failure) | 6 | 8 min |
-| 6 · Where to Start | 3 | 3 min |
-| 7 · Wrap & Q&A | 2 + Q&A | 10 min |
+| Title + Intro | 2 | 2 min |
+| 1 · The Problem | 6 | 6 min |
+| 2 · What is an OSPO | 3 | 4 min |
+| 3 · The 4 Pillars | 5 | 7 min |
+| 4 · ROI | 3 | 5 min |
+| 5 · Real Stories (success + failure) | 7 | 8 min |
+| 6 · Where to Start | 2 | 3 min |
+| Wrap & Q&A | 2 + Q&A | 10 min |
+| **Total** | **30** | **45 min** |
 
 ## Sources
 

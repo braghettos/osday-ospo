@@ -309,58 +309,22 @@ sure you can answer "are we exposed?" in minutes, not days.
 
 ---
 
-<!-- _class: center -->
-
-# Part 2
-## What is an OSPO?
-### Open Source Program Office — and no, it's not "the legal team but for GitHub"
-
-<!--
-4 minutes. Define it precisely so the rest of the talk lands.
--->
-
----
-
 ## Definition
 
 > *"An Open Source Program Office is the **center of competency** for an organization's open source operations and structure."*
 >
 > **— TODO Group · OSPO Glossary**
 
-It is **not**:
-- A legal review queue
-- A compliance gate that says "no"
-- A side project of the CTO's chief of staff
+| **Inward** (your org) | **Outward** (the ecosystem) |
+|---|---|
+| Policy · process · tooling | Community · foundations |
+| Compliance · security · training | Public contributions · brand |
 
-It **is**:
-- The team that makes open source *strategic* instead of *accidental*
-- The single place where legal, security, engineering, and community meet
-
-<span class="small">Source: ospoglossary.todogroup.org</span>
+It is **not** a legal review queue or a "no" gate — it's the **bridge** between your organization and the open source ecosystem you depend on.
 
 <!--
 The negation list is the most useful part. Audiences have wrong mental
 models. Surface them first, then replace them.
--->
-
----
-
-## Two faces of an OSPO
-
-<br>
-
-| **Inward-facing** | **Outward-facing** |
-|---|---|
-| Policy, process, tooling | Community engagement |
-| Education & enablement | Foundation memberships |
-| Compliance & security | Public contributions |
-| InnerSource culture | Brand & recruiting |
-| Metrics & reporting | Standards participation |
-
-The OSPO is the **bridge** between *your* organization and the *open source* ecosystem you depend on.
-
-<!--
-The bridge metaphor is sticky. Reuse it later when discussing case studies.
 -->
 
 ---
@@ -409,19 +373,6 @@ That's exactly *why* you need one.
 <!--
 This is where you defuse the "we're too small" objection. Adjust
 examples to the audience's industry if you can.
--->
-
----
-
-<!-- _class: center -->
-
-# Part 3
-## The 4 Pillars
-### *What an OSPO actually does, week to week*
-
-<!--
-8 minutes. The technical meat of the talk. One slide per pillar + an
-overview. Don't go too deep — point them at the mindmap.
 -->
 
 ---
@@ -529,37 +480,6 @@ quantifies easily.
 
 ---
 
-## All four pillars · in one picture
-
-<br>
-
-| Pillar | Owner archetype | Key artifact | Failure mode |
-|---|---|---|---|
-| **Strategy & Governance** | Counselor | OSS policy doc | Decisions made ad-hoc |
-| **Compliance & Security** | Gatekeeper | SBOM + scan pipeline | "Are we vulnerable?" *(no answer)* |
-| **Contribution & Upstream** | Advocate | Forking & CLA process | Permanent forks, no influence |
-| **Culture & Talent** | Enabler + Environmentalist | InnerSource + training | Wheel reinvented quarterly |
-
-<!--
-This is the "screenshot this" slide. Single-glance summary of the
-whole pillar section.
--->
-
----
-
-<!-- _class: center -->
-
-# Part 4
-## Show Me the ROI
-### *The CFO doesn't care about your culture deck*
-
-<!--
-6 minutes. Translate everything to dollars/euros and risk reduction.
-This is the section that wins your C-level pitch.
--->
-
----
-
 ## ROI · Costs avoided
 
 🛡️ **Security incident avoided**
@@ -616,33 +536,14 @@ Same outcome, different vocabulary depending on who's listening.
 
 🛠️ **Standards seat** — participate in OpenChain, SPDX, CNCF, CRA working groups
 
+<span class="small">Proof: Microsoft (10K+ repos · 12K contributors), SAP (#7 on GitHub), Comcast (10× upstream growth in 5y), Capital One (recruiting magnet in regulated banking) — all from TODO Group case studies.</span>
+
 > *"This type of co-innovation, for me, is the most compelling aspect about the whole open source movement."* — SAP OSPO
 
 <!--
 This is the slide that gets the CTO nodding. Strategic upside is hard
 to quantify but easy to recognize. Use the SAP quote as your closer
 for this section.
--->
-
----
-
-## ROI · The numbers others have published
-
-| Org | Outcome |
-|---|---|
-| **Microsoft** | 12,000+ employees actively contributing, 10K+ repos managed centrally |
-| **SAP** | Ranked #7 globally on GitHub by contributor count |
-| **Comcast** | ~10× growth in upstream contributions in 5 years |
-| **Uber** | Multiple projects donated to CNCF / LF AI; reduced engineering cost |
-| **Capital One** | OSS adoption in regulated banking became a recruiting magnet |
-
-These aren't ad campaigns. They're TODO Group case studies.
-
-<span class="small">Source: todogroup.org/resources/case-studies</span>
-
-<!--
-Numbers from public, vendor-neutral case studies. Cite the source so
-the audience can verify. Trust = leverage.
 -->
 
 ---
@@ -788,18 +689,6 @@ of your most critical, least-staffed deps.
 
 ---
 
-<!-- _class: center -->
-
-# Part 6
-## Where to Start
-### *Even if you have one person and zero budget*
-
-<!--
-5 minutes. Concrete. Walk-out actionable.
--->
-
----
-
 ## The minimum viable OSPO
 
 You don't need a 20-person team. You need **one person with a mandate**.
@@ -842,38 +731,6 @@ sequenced. They should leave feeling "I can start Monday."
 This is the pitch. Three slides. Risk, cost, upside. End on an ask
 that's small enough to say yes to.
 -->
-
----
-
-## You're not alone · Resources
-
-**TODO Group** — todogroup.org · the global OSPO community
-- Glossary, mindmap, case studies, surveys
-
-**OSPO Alliance** — ospo.zone · the European arm (Eclipse Foundation)
-- *Good Governance Initiative*, regional working groups
-
-**OpenChain** — openchainproject.org · ISO/IEC 5230 compliance
-- The international standard for OSS license compliance
-
-**OpenSSF** — openssf.org · supply-chain security
-- Scorecard, Sigstore, Alpha-Omega, S2C2F
-
-**InnerSource Commons** — innersourcecommons.org
-
-**Linux Foundation training** — LFC191, LFC193, LFC194
-
-<!--
-Don't read every URL. Tell them the slides are public — and they are
-the curated reading list.
--->
-
----
-
-<!-- _class: center -->
-
-# Part 7
-## Wrap
 
 ---
 
