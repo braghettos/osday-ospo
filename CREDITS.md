@@ -1,12 +1,15 @@
-# Image Credits
+# Credits
 
-All photographic images in this deck are licensed under the [Unsplash License](https://unsplash.com/license) — free for commercial and editorial use, attribution appreciated. Attribution given here per Codemotion accessibility guideline #11 (use diverse images to make your presentation inclusive) and as a courtesy to the photographers.
+| Asset | Source | Used on |
+|---|---|---|
+| `assets/qr-repo.png` | Generated from `https://github.com/braghettos/osday-ospo` via the [`qrcode`](https://www.npmjs.com/package/qrcode) npm package | Closing slide |
 
-| File | Photographer | Source | Used on |
-|---|---|---|---|
-| `assets/hero-code.jpg` | [Markus Spiske](https://unsplash.com/@markusspiske) | [Unsplash](https://unsplash.com/photos/multicolored-codes-rWKhlvk-bsM) | Title slide background |
-| `assets/glitch.jpg` | [Egor Komarov](https://unsplash.com/@egorkomarov) | [Unsplash](https://unsplash.com/photos/abstract-glitch-art-with-digital-code-fragments-vpWRUwL39FQ) | Part 1 (The Problem) opener |
-| `assets/community.jpg` | [Annie Spratt](https://unsplash.com/@anniespratt) | [Unsplash](https://unsplash.com/photos/group-of-people-using-laptop-computer-QckxruozjRg) | Part 5 (Real Stories) opener |
-| `assets/qr-repo.png` | Generated from `https://github.com/braghettos/osday-ospo` via the [`qrcode`](https://www.npmjs.com/package/qrcode) npm package | n/a | Closing slide |
+## A note on photographic background imagery
 
-Each image is referenced with descriptive alt text in `slides.md` so screen-reader users get the same information.
+An earlier revision of this deck embedded three Unsplash photographs as blurred slide backgrounds (one on the title slide, one on each section-divider). They were **removed** because:
+
+- Background imagery makes automated accessibility tooling (axe-core, pa11y) unable to compute foreground/background contrast, generating false-positive findings on every text element on those slides.
+- Text-on-photo contrast is unstable and degrades badly under projector conditions, especially at the back of the room.
+- Decorative imagery is invisible to screen-reader users — the inclusivity gain claimed for it doesn't reach the audience members who most need accessibility help.
+
+Solid `#000000` slides with high-contrast typography are the more honestly accessible choice. The Codemotion guideline about "diverse images for inclusivity" remains a good rule for *meaningful* inline imagery on content slides — but not for decorative backgrounds where they compete with the content.

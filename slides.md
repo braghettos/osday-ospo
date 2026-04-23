@@ -142,8 +142,6 @@ style: |
 
 <!-- _class: center -->
 
-![bg blur:6px brightness:0.25 Abstract photo of multicoloured source code on a dark screen — used as a decorative background; the talk content is in the foreground text](assets/hero-code.jpg)
-
 # Open Source in Production
 
 ## Why Your Company Needs an OSPO
@@ -195,8 +193,6 @@ The promise at the bottom is the contract — keep it.
 ---
 
 <!-- _class: center -->
-
-![bg blur:4px brightness:0.3 Abstract glitch-art visualisation of broken digital code fragments — the visual mood for the part of the talk about unmanaged open source risk](assets/glitch.jpg)
 
 # Part 1
 ## The Problem
@@ -652,8 +648,6 @@ the audience can verify. Trust = leverage.
 ---
 
 <!-- _class: center -->
-
-![bg blur:5px brightness:0.3 A diverse group of people collaborating around a laptop — symbolising the cross-functional teams the case studies in this section come from](assets/community.jpg)
 
 # Part 5
 ## Real Stories
