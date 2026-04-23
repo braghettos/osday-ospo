@@ -120,9 +120,11 @@ style: |
 
   /* Page-number indicator (Marp renders this as section:after).
    * Default ~.6em (≈ 14 px) is small + sits over the bottom-right
-   * gradient-corner. Force a readable size and remove the
-   * decorative gradient corner so the number stands alone. */
+   * gradient-corner. Force a readable size, remove the decorative
+   * gradient corner, and switch from "5" to "5 / 30" so the audience
+   * sees position-in-deck, not just current page. */
   section:after {
+    content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total) !important;
     font-size: 22px !important;
     color: #FFFFFF !important;
     text-shadow: none !important;
