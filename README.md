@@ -48,7 +48,11 @@ No global install needed — `marp-cli` runs via `npx`.
 
 ## Accessibility
 
+> **See [ACCESSIBILITY.md](ACCESSIBILITY.md) for the full statement, conformance status, audit methodology, and known limitations.**
+
 The deck targets **WCAG 2.1 Level AA**, the technical baseline referenced by the **European Accessibility Act (EAA)** via the harmonized standard **EN 301 549**. See "Compliance scope" below for the legal nuance.
+
+Run the audit yourself: `npm run audit:a11y` (uses pa11y + axe-core + HTML CodeSniffer).
 
 ### What's in the deck
 
@@ -60,13 +64,14 @@ The deck targets **WCAG 2.1 Level AA**, the technical baseline referenced by the
 - **No motion / no auto-advance / no time-based content.** Keyboard-navigable in browser presentation mode.
 - **[`TRANSCRIPT.md`](TRANSCRIPT.md)** ships in this repo — a linear plain-text version for screen-reader users, attendees who prefer reading, or anyone who can't see the slides clearly.
 
-### What I haven't verified
+### What's been verified
 
-- Automated axe-core / Lighthouse audit on the rendered HTML
+- **Automated audit** — pa11y + axe-core + HTML CodeSniffer on `dist/slides.html`. 9 baseline color-contrast errors → 0 confirmed errors after the accessibility pass. The 4 remaining axe warnings are `needsFurtherReview` (axe's "I can't tell, please check manually") false positives caused by Marpit's SVG-foreignObject rendering. Full details and manual contrast verification (all colors hit WCAG AAA) in [ACCESSIBILITY.md](ACCESSIBILITY.md).
+
+### What's *not* yet verified
+
 - Manual screen-reader pass (VoiceOver / NVDA / JAWS)
-- Verification with users who have visual or cognitive disabilities
-
-These should be run before claiming WCAG conformance formally.
+- User testing with people who rely on assistive technology in production
 
 ### Compliance scope · the EAA question honestly
 

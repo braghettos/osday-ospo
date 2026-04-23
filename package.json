@@ -4,15 +4,18 @@
   "private": true,
   "description": "Open Source in Production: Why Your Company Needs an OSPO — slides for OSDay 2026",
   "scripts": {
-    "build:html": "marp slides.md -o dist/slides.html --html",
+    "build:html": "marp slides.md -o dist/slides.html --html --bespoke.osc=false",
     "build:pdf": "marp slides.md -o dist/slides.pdf --allow-local-files",
     "build:pptx": "marp slides.md -o dist/slides.pptx --allow-local-files",
     "build:notes": "marp slides.md -o dist/slides-notes.pdf --allow-local-files --notes",
     "build": "npm run build:html && npm run build:pdf && npm run build:notes",
     "preview": "marp slides.md --preview",
-    "watch": "marp slides.md --watch --html"
+    "watch": "marp slides.md --watch --html --bespoke.osc=false",
+    "audit:a11y": "pa11y --runner axe --runner htmlcs --reporter cli \"file://$PWD/dist/slides.html\" || true"
   },
   "devDependencies": {
-    "@marp-team/marp-cli": "^4.0.0"
+    "@axe-core/cli": "^4.11.2",
+    "@marp-team/marp-cli": "^4.0.0",
+    "pa11y": "^9.1.1"
   }
 }

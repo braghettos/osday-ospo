@@ -76,6 +76,38 @@ style: |
   .ok   { color: #B5F0B5; font-weight: 700; }
 
   /* Decorative-only marks: hide from screen readers via aria-hidden in markup */
+
+  /* === Override uncover theme variables for high-contrast slide chrome === */
+  section {
+    --color-background: #000000;
+    --color-background-paginate: #000000;
+    --color-foreground: #FFFFFF;
+    --color-header: #FFFFFF;
+    --color-header-shadow: transparent;
+    --color-highlight: #FFD166;
+    --color-highlight-hover: #FFD166;
+    --color-highlight-heading: #FFD166;
+    --color-dimmed: #D0D0D0;
+  }
+
+  /* Slide-internal header/footer (from `header:` / `footer:` frontmatter)
+   * — bare selectors so Marpit's `section X` scoping reaches them */
+  header, footer {
+    color: #FFFFFF !important;
+    text-shadow: none !important;
+    background: #000000 !important;
+    opacity: 1 !important;
+  }
+
+  /* Title slide: force explicit colors on inline em/strong with their own
+   * background-color hint so axe can compute contrast unambiguously */
+  h1, h2, h3, p { background-color: transparent; }
+  em { color: inherit !important; font-style: italic; background-color: #000000; }
+  strong { color: #FFD166 !important; background-color: #000000; }
+
+  /* Marp Bespoke on-screen controls (OSC) are disabled at build time
+   * via --bespoke.osc=false; their styling is therefore not needed here.
+   * Keyboard navigation (arrows, space, F=fullscreen) still works. */
 ---
 
 <!-- _class: center -->
