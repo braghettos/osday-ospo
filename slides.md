@@ -300,9 +300,11 @@ sure you can answer "are we exposed?" in minutes, not days.
 
 ---
 
-## Definition (TODO Group)
+## Definition
 
-> An OSPO is the **center of competency** for an organization's open source operations and structure.
+> *"An Open Source Program Office is the **center of competency** for an organization's open source operations and structure."*
+>
+> **— TODO Group · OSPO Glossary**
 
 It is **not**:
 - A legal review queue
