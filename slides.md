@@ -75,7 +75,8 @@ style: |
     font-size: 24px;
     color: #FFFFFF;
   }
-  .small { font-size: 18px; color: #D0D0D0; }
+  .small { font-size: 20px; color: #D0D0D0; font-style: normal; }
+  .small em { font-style: normal; }
   .warn { color: #FF8A8A; font-weight: 700; }
   .ok   { color: #B5F0B5; font-weight: 700; }
 
@@ -126,7 +127,7 @@ style: |
 <br>
 
 **OSDay 2026** · Florence
-*Diego Braga · CTO & Co-founder, Krateo PlatformOps*
+**Diego Braga** · CTO & Co-founder, Krateo PlatformOps
 
 <!--
 TIMING: 45 min total — aim for 35 min talk + 10 min Q&A.
@@ -150,12 +151,12 @@ production every day?" Everyone. That gap is the entire talk.
 
 ## Who I am · Who you are
 
-**Me:** CTO & Co-founder at **Krateo PlatformOps**.
-Background in modernizing legacy applications — breaking monoliths into microservices, designing automation flows across the entire stack (app → physical machine), and enabling CI/CD through orchestrated Disaster Recovery and Change Management.
+**Me:** Chief Technology Officer (CTO) & Co-founder at **Krateo PlatformOps**.
+Background in modernizing legacy applications — breaking monoliths into microservices, designing automation flows across the entire stack (app → physical machine), and enabling CI/CD *(continuous integration and continuous deployment)* through orchestrated Disaster Recovery and Change Management.
 
 **You, probably:**
 - A developer shipping code that's 80%+ open source
-- An EM/CTO worrying about compliance & security
+- An Engineering Manager (EM) or CTO worrying about compliance & security
 - Someone who's googled "what does an OSPO actually do"
 
 **The deal for the next 35 minutes:**
@@ -291,7 +292,7 @@ sure you can answer "are we exposed?" in minutes, not days.
 
 # Part 2
 ## What is an OSPO?
-### *And no, it's not "the legal team but for GitHub"*
+### Open Source Program Office — and no, it's not "the legal team but for GitHub"
 
 <!--
 4 minutes. Define it precisely so the rest of the talk lands.
@@ -883,9 +884,9 @@ remember tomorrow morning. Keep it tight.
 
 ![w:220 QR code that opens github.com/braghettos/osday-ospo — slides, transcript, accessibility statement, and audit results](assets/qr-repo.png)
 
-**Scan ↑** or open *github.com/braghettos/osday-ospo*
+**Scan ↑** or open `github.com/braghettos/osday-ospo`
 
-**Get in touch:** *linkedin.com/in/diegobraga86*
+**Get in touch:** `linkedin.com/in/diegobraga86`
 
 <span class="small">Sources: TODO Group · ospoglossary.todogroup.org · ospomindmap.todogroup.org · Black Duck OSSRA 2026</span>
 
