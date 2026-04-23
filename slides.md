@@ -116,6 +116,8 @@ style: |
 
 <!-- _class: center -->
 
+![bg blur:6px brightness:0.25 Abstract photo of multicoloured source code on a dark screen — used as a decorative background; the talk content is in the foreground text](assets/hero-code.jpg)
+
 # Open Source in Production
 
 ## Why Your Company Needs an OSPO
@@ -168,6 +170,8 @@ The promise at the bottom is the contract — keep it.
 
 <!-- _class: center -->
 
+![bg blur:4px brightness:0.3 Abstract glitch-art visualisation of broken digital code fragments — the visual mood for the part of the talk about unmanaged open source risk](assets/glitch.jpg)
+
 # Part 1
 ## The Problem
 ### *Open Source is eating your codebase. Are you in control?*
@@ -198,25 +202,44 @@ The "you inherited" line is the rhetorical pivot — you're already in the open 
 
 ---
 
-## The numbers get worse
+## The numbers get worse · vulnerabilities
 
 | | |
 |---|---|
 | **581** | average vulnerabilities per codebase *(+107% YoY)* |
 | **78%** | codebases with high-risk vulnerabilities |
-| **44%** | codebases with critical-risk issues *(RCE, data breach)* |
+| **44%** | codebases with critical-risk issues *(remote code execution, data breach)* |
 | **68%** | codebases with license conflicts |
-| **93%** | codebases with components inactive for 2+ years |
-| **92%** | codebases with components 4+ years out-of-date |
-| **65%** | orgs hit by a software supply chain attack last year |
 
 <span class="small">Black Duck OSSRA 2026 · 2,400+ commercial codebases audited</span>
 
 <!--
-Don't read the table. Pick two numbers and tell a story:
+Don't read the table. Pick one number and tell a story:
 - 581 vulns is not a backlog you "get to next sprint"
-- 92% means almost every dep you ship is years stale
-The audience already feels this — you're naming it.
+- 44% RCE/breach risk is not theoretical
+Pause after each. Next slide adds the supply-chain side.
+-->
+
+---
+
+## The numbers get worse · supply chain
+
+| | |
+|---|---|
+| **93%** | codebases with components inactive for 2+ years |
+| **92%** | codebases with components 4+ years out-of-date |
+| **65%** | organisations hit by a supply-chain attack last year |
+
+<br>
+
+**Translation:** almost every dependency you ship is years stale, and two-thirds of you have already been targeted.
+
+<span class="small">Same source · Black Duck OSSRA 2026</span>
+
+<!--
+This is the "and that's just half of it" beat. The vulnerability
+numbers are about today's bugs; the staleness numbers are about
+tomorrow's bugs you're not patching.
 -->
 
 ---
@@ -410,7 +433,6 @@ content. Pause briefly after each row.
 - Stand up an **Open Source Review Board** (legal + security + engineering)
 - Make **risk explicit**: brand, IP, competitive, license
 - Support **M&A** due diligence (target's open source software / OSS posture)
-- Define **measurable goals** annually — like Red Hat does
 
 > *"There is nothing traditional about Capital One and our approach to technology."* — Capital One OSPO
 
@@ -430,8 +452,7 @@ concept — it's a concrete artifact people can take home.
 - Automate **license scanning** in CI (Snyk, FOSSA, ScanCode, OSS Review Toolkit)
 - Track **vulnerabilities** continuously, not just at release
 - Define **license classification** (allowed, conditional, forbidden)
-- Handle **mixed code** rules: containers, SDKs, SaaS, APIs
-- Comply with **OpenChain ISO/IEC 5230**, **SPDX**, **CRA** *(EU Cyber Resilience Act, 2027)*
+- Comply with **OpenChain ISO/IEC 5230**, **SPDX**, **CRA** *(EU Cyber Resilience Act, in force 2027)*
 
 **The bar is rising fast.** EU CRA, US EO 14028, customer SBOM requirements.
 
@@ -449,7 +470,6 @@ optional.
 
 - Process for **upstreaming patches** (don't carry forks forever)
 - **Contributor License Agreement (CLA)** / **Developer Certificate of Origin (DCO)** infrastructure — *CLA Assistant* is open source
-- **Patent / legal review** before public release
 - **Project incubation** playbooks (naming, governance, license, hosting)
 - Foundation memberships: **Linux Foundation, Apache, Eclipse, OpenSSF, CNCF** *(Cloud Native Computing Foundation)*
 - Recognize and **reward** internal contributors
@@ -474,7 +494,6 @@ critical when a key dep changes direction.
 - **Ambassador programs**: identify internal OSS leaders
 - **Recruitment**: a public OSS presence is the #1 dev-employer signal
 - **Recognition**: OSS contributions visible in performance reviews
-- **Events**: brown bags, conference sponsorships, internal OSS day
 
 **Comcast:** OSS engagement *"helped the company recruit new developers."*
 
@@ -605,6 +624,8 @@ the audience can verify. Trust = leverage.
 ---
 
 <!-- _class: center -->
+
+![bg blur:5px brightness:0.3 A diverse group of people collaborating around a laptop — symbolising the cross-functional teams the case studies in this section come from](assets/community.jpg)
 
 # Part 5
 ## Real Stories
